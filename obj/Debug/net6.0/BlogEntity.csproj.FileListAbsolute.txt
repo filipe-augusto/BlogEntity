@@ -1,0 +1,15 @@
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\bin\Debug\net6.0\BlogEntity.exe
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\bin\Debug\net6.0\BlogEntity.deps.json
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\bin\Debug\net6.0\BlogEntity.runtimeconfig.json
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\bin\Debug\net6.0\BlogEntity.dll
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\bin\Debug\net6.0\BlogEntity.pdb
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\obj\Debug\net6.0\BlogEntity.csproj.AssemblyReference.cache
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\obj\Debug\net6.0\BlogEntity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\obj\Debug\net6.0\BlogEntity.AssemblyInfoInputs.cache
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\obj\Debug\net6.0\BlogEntity.AssemblyInfo.cs
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\obj\Debug\net6.0\BlogEntity.csproj.CoreCompileInputs.cache
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\obj\Debug\net6.0\BlogEntity.dll
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\obj\Debug\net6.0\refint\BlogEntity.dll
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\obj\Debug\net6.0\BlogEntity.pdb
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\obj\Debug\net6.0\BlogEntity.genruntimeconfig.cache
+C:\Users\fchaves\source\repos\EntityIntroductions\BlogEntity\obj\Debug\net6.0\ref\BlogEntity.dll
