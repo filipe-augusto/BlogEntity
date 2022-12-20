@@ -38,9 +38,13 @@ using (var context = new BlogDataContext()){
 
         var tag = context.Tags.AsNoTracking().
         FirstOrDefault(x => x.Id == 3);//se houver mais que 1 ele traz o primeiro
+        //se não hover registro ele retorna null
          var tag2 = context.Tags.AsNoTracking().
         Single(x => x.Id == 3); //se houver mais que 1 ele da erro
 
+       var tag3 = context.Tags.AsNoTracking().
+        First(x => x.Id == 3); //se houver mais que 1 ele da erro
+        //se não houver registro ele da erro
         System.Console.WriteLine(tag?.Name);
 
 
