@@ -11,10 +11,15 @@ using (var context = new BlogDataContext()){
         // context.SaveChanges();//salva no banco
 
         //reidratação UPDATE
-        var tag = context.Tags.FirstOrDefault(x => x.Id ==  3);
-        tag.Name = ".NET";
-        tag.Slug = "dotnet";
-        context.Update(tag);
-        context.SaveChanges();
+        // var tag = context.Tags.FirstOrDefault(x => x.Id ==  3);
+        // tag.Name = ".NET";
+        // tag.Slug = "dotnet";
+        // context.Update(tag);
+        // context.SaveChanges();
+        //obs sempre que precisar atualizar ou deletar precisa resgatar o objeto do banco
+        //DELETE
+        // var tag = context.Tags.FirstOrDefault(x => x.Id ==  3);
+        // context.Remove(tag);
+        // context.SaveChanges();
 
 }
