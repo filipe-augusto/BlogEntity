@@ -19,7 +19,7 @@ void void2_3(){
     var post = context.Posts.Include(x => x.Author)
     .Include(x => x.Category)
     .OrderByDescending(x => x.LastUpdateDate)
-    .FirstOrDefault(); // pegando o primeiro item
+    .FirstOrDefault(); //Pegando o primeiro item.
 
         post.Author.Name = "Teste123";
         context.Posts.Update(post);
@@ -39,7 +39,6 @@ void modulo2_2(){
                 System.Console.WriteLine($"Title: {post.Title} Author: {post.Author?.Email} - Categoria: {post.Category.Name}");
         }
 }
-
 
 void modulo2_1(){
     using var context = new BlogDataContext();
@@ -68,7 +67,6 @@ void modulo2_1(){
          context.Posts.Add(post);
         context.SaveChanges();
 }
-
 
 void modulo1(){
 using (var context = new BlogDataContext()){
