@@ -6,19 +6,37 @@ using blog.Models;
 using Blog.Data;
 using Microsoft.EntityFrameworkCore;
 
-Console.Clear();
-modulo2_2();
+//Console.Clear();
+void2_3();
 //modulo2_1();
 //modulo1();
 
+
+void void2_3(){
+        Console.Clear();
+    using var context = new BlogDataContext();  
+
+    var post = context.Posts.Include(x => x.Author)
+    .Include(x => x.Category)
+    .OrderByDescending(x => x.LastUpdateDate)
+    .FirstOrDefault(); // pegando o primeiro item
+
+        post.Author.Name = "Teste123";
+        context.Posts.Update(post);
+        context.SaveChanges();
+}
+
 void modulo2_2(){
         using var context = new BlogDataContext();  
-        var posts = context.Posts.AsNoTracking().Include(x => x.Author)
+        var posts = context.Posts.AsNoTracking()
+        .Include(x => x.Author)
+        .Include(x => x.Category)
+        //.ThenInclude(x=>x.Endereco) subselect
         .Where(x => x.AuthorId ==6)
         .OrderBy(x => x.LastUpdateDate).ToList();
 
         foreach(var post in posts){
-                System.Console.WriteLine($"Title: {post.Title} Author: {post.Author?.Email}");
+                System.Console.WriteLine($"Title: {post.Title} Author: {post.Author?.Email} - Categoria: {post.Category.Name}");
         }
 }
 
@@ -50,9 +68,6 @@ void modulo2_1(){
          context.Posts.Add(post);
         context.SaveChanges();
 }
-
-
-
 
 
 void modulo1(){
