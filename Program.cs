@@ -4,6 +4,7 @@
 //dotnet add package Microsoft.EntityFrameWork.SqlServer
 using blog.Models;
 using Blog.Data;
+using Microsoft.EntityFrameworkCore;
 
 using (var context = new BlogDataContext()){
         // var tag = new Tag{Name="ASP.NET", Slug="aspnet"};
@@ -25,12 +26,24 @@ using (var context = new BlogDataContext()){
 
        // var tags = context.Tags.ToList();//sempre que tiver um .tolist estou executando a query
         //ERRADO
-        var tags_ERRADO = context.Tags.ToList().Where(x=>x.Name.Contains(".NET"));
+       // var tags_ERRADO = context.Tags.ToList().Where(x=>x.Name.Contains(".NET"));
         // Da forma acima ele consuta todas as tags  e depois aplica o filtro
 
         //CERTO - O TOLIST SEMPRE SEMPRE SERÁ O ULTIMO
-           var tags_CERTO = context.Tags.Where(x=>x.Name.Contains(".NET")).ToList();
+       //    var tags_CERTO = context.Tags.Where(x=>x.Name.Contains(".NET")).ToList();
         // foreach(var tag in tags){
         //     Console.WriteLine(tag.Name);
         // }
+        var tags = context.Tags.AsNoTracking().ToList();
+
+        var tag = context.Tags.AsNoTracking().
+        FirstOrDefault(x => x.Id == 3);//se houver mais que 1 ele traz o primeiro
+         var tag2 = context.Tags.AsNoTracking().
+        Single(x => x.Id == 3); //se houver mais que 1 ele da erro
+
+        System.Console.WriteLine(tag?.Name);
+
+
+
+
 }
