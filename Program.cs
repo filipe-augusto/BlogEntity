@@ -6,12 +6,24 @@ using blog.Models;
 using Blog.Data;
 using Microsoft.EntityFrameworkCore;
 
-
-
-modulo2();
+Console.Clear();
+modulo2_2();
+//modulo2_1();
 //modulo1();
 
-void modulo2(){
+void modulo2_2(){
+        using var context = new BlogDataContext();  
+        var posts = context.Posts.AsNoTracking().Include(x => x.Author)
+        .Where(x => x.AuthorId ==6)
+        .OrderBy(x => x.LastUpdateDate).ToList();
+
+        foreach(var post in posts){
+                System.Console.WriteLine($"Title: {post.Title} Author: {post.Author?.Email}");
+        }
+}
+
+
+void modulo2_1(){
     using var context = new BlogDataContext();
 
     var user =new User{
